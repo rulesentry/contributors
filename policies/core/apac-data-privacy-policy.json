@@ -3,7 +3,7 @@
   "id": "policy.apac-data-privacy",
   "qualified_id": "core.policy.apac-data-privacy",
   "type": "policy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "active",
   "name": "APAC Data Privacy Policy",
   "description": "Data privacy policy for Asia-Pacific jurisdictions. Covers Singapore PDPA, Japan APPI, Australia Privacy Act, India DPDP Act, and government ID detection across AU, JP, IN, CN, HK, KR, TW, and TH.",
