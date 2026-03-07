@@ -19,10 +19,132 @@
     "banking",
     "global"
   ],
-  "rule_categories": [
+  "rules": [
     {
-      "category_id": "financial",
-      "mode": "all"
+      "rule_id": "financial.account_number",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.bic_swift",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.bitcoin_address",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.bsb_australia",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.clabe_mexico",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.credit_card_luhn",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.cusip",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.cvv_cvc",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.debit_card",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.ethereum_address",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.iban_mod97",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.ifsc_india",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.isin",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.lei",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.pin_code",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.routing_number",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.sedol",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "financial.uk_sort_code",
+      "pinned_version": "3.0.0",
+      "priority": 45,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
     }
   ],
   "metadata": {

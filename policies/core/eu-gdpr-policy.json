@@ -40,17 +40,219 @@
     },
     {
       "rule_id": "financial.iban_mod97",
-      "pinned_version": "1.0.0",
+      "pinned_version": "3.0.0",
       "priority": 90,
       "attached_at": "2026-02-10T00:00:00Z",
       "attached_by": "claude-code",
       "notes": "IBAN detection for EU financial data protection"
-    }
-  ],
-  "rule_filters": [
+    },
     {
-      "by_region": ["EU", "DE", "FR", "NL", "ES", "IT"],
-      "by_profile": ["gdpr"]
+      "rule_id": "personal.age_explicit",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Age detection (GDPR filter)"
+    },
+    {
+      "rule_id": "personal.age_range",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Age range detection (GDPR filter)"
+    },
+    {
+      "rule_id": "personal.biometric_data",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Biometric data detection (GDPR Article 9 special category)"
+    },
+    {
+      "rule_id": "personal.blood_type",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Blood type detection (GDPR Article 9 health data)"
+    },
+    {
+      "rule_id": "personal.date_of_birth",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Date of birth detection (GDPR filter)"
+    },
+    {
+      "rule_id": "personal.gender_marker",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Gender marker detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.apartment_number",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Apartment number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.country_name",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Country name detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.email_address",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Email address detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.fax_number",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Fax number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.phone_france",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "French phone number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.phone_germany",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "German phone number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.po_box",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "PO Box detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.postal_code_germany",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "German postal code detection (GDPR filter)"
+    },
+    {
+      "rule_id": "contact.street_address",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Street address detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.eu_french_carte_nationale",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "French national ID card detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.eu_german_personalausweis",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "German personal ID card detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.eu_italian_codice_fiscale",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Italian fiscal code detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.eu_netherlands_bsn",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Dutch BSN citizen service number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.eu_spanish_dni",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Spanish DNI national ID detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.french_nir",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "French NIR social security number detection (GDPR filter)"
+    },
+    {
+      "rule_id": "government.german_tax_id",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "German tax ID detection (GDPR filter)"
+    },
+    {
+      "rule_id": "network.ipv4_address",
+      "pinned_version": "3.0.0",
+      "priority": 50,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "IPv4 address detection (GDPR online identifier)"
+    },
+    {
+      "rule_id": "network.ipv6_address",
+      "pinned_version": "3.0.0",
+      "priority": 50,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "IPv6 address detection (GDPR online identifier)"
+    },
+    {
+      "rule_id": "network.mac_address",
+      "pinned_version": "3.0.0",
+      "priority": 50,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "MAC address detection (GDPR online identifier)"
+    },
+    {
+      "rule_id": "network.wifi_ssid",
+      "pinned_version": "3.0.0",
+      "priority": 50,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "WiFi SSID detection (GDPR online identifier)"
     }
   ],
   "metadata": {

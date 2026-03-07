@@ -45,22 +45,30 @@
       "attached_at": "2026-03-07T00:00:00Z",
       "attached_by": "claude-code",
       "notes": "PIN code detection"
-    }
-  ],
-  "rule_categories": [
+    },
     {
-      "category_id": "financial",
-      "mode": "selective",
-      "include_rules": [
-        "financial.credit_card_luhn",
-        "financial.cvv_cvc",
-        "financial.pin_code"
-      ]
-    }
-  ],
-  "rule_filters": [
+      "rule_id": "financial.debit_card",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Debit card detection (pci-dss profile)"
+    },
     {
-      "by_profile": ["pci-dss"]
+      "rule_id": "digital_identity.stripe_api_key",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Stripe API key detection (pci-dss profile)"
+    },
+    {
+      "rule_id": "digital_identity.paypal_client_secret",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "PayPal client secret detection (pci-dss profile)"
     }
   ],
   "overrides": [

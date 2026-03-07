@@ -25,7 +25,7 @@
   "rules": [
     {
       "rule_id": "personal.date_of_birth",
-      "pinned_version": "1.0.0",
+      "pinned_version": "3.0.0",
       "priority": 80,
       "attached_at": "2026-02-10T00:00:00Z",
       "attached_by": "claude-code",
@@ -33,7 +33,7 @@
     },
     {
       "rule_id": "government.ssn_format",
-      "pinned_version": "1.0.0",
+      "pinned_version": "3.0.0",
       "priority": 100,
       "attached_at": "2026-02-10T00:00:00Z",
       "attached_by": "claude-code",
@@ -41,7 +41,7 @@
     },
     {
       "rule_id": "government.us_passport",
-      "pinned_version": "1.0.0",
+      "pinned_version": "3.0.0",
       "priority": 90,
       "attached_at": "2026-02-10T00:00:00Z",
       "attached_by": "claude-code",
@@ -49,28 +49,219 @@
     },
     {
       "rule_id": "government.ein",
-      "pinned_version": "1.0.0",
+      "pinned_version": "3.0.0",
       "priority": 75,
       "attached_at": "2026-02-10T00:00:00Z",
       "attached_by": "claude-code",
       "notes": "Employer Identification Number detection for financial compliance"
-    }
-  ],
-  "rule_categories": [
-    {
-      "category_id": "healthcare",
-      "mode": "all"
-    }
-  ],
-  "rule_filters": [
-    {
-      "by_region": ["US"],
-      "by_severity": ["critical", "high"],
-      "by_profile": ["hipaa"]
     },
     {
-      "by_region": ["US-CA"],
-      "by_profile": ["ccpa"]
+      "rule_id": "healthcare.health_insurance_member_id",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Health insurance member ID detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.health_plan_beneficiary_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Health plan beneficiary number detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.hospital_account_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Hospital account number detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.icd10_code",
+      "pinned_version": "1.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "ICD-10 diagnostic code detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.medicaid_id",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medicaid ID detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.medical_device_identifier",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medical device UDI detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.medical_license_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medical license number detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.medicare_beneficiary_id",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medicare Beneficiary Identifier detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.mrn_detect",
+      "pinned_version": "1.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medical Record Number detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.npi_luhn",
+      "pinned_version": "1.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "NPI with Luhn checksum validation (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.npi_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "National Provider Identifier detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.pharmacy_prescription_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Pharmacy prescription number detection (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.phi_composite",
+      "pinned_version": "1.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Composite PHI detection rule (healthcare category)"
+    },
+    {
+      "rule_id": "healthcare.us_dea_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "DEA registration number detection (healthcare category)"
+    },
+    {
+      "rule_id": "personal.blood_type",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Blood type detection (HIPAA Safe Harbor identifier)"
+    },
+    {
+      "rule_id": "personal.health_insurance_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Health insurance number detection (HIPAA filter)"
+    },
+    {
+      "rule_id": "personal.medical_record_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Medical record number detection (HIPAA filter)"
+    },
+    {
+      "rule_id": "personal.patient_id",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Patient ID detection (HIPAA filter)"
+    },
+    {
+      "rule_id": "personal.prescription_number",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Prescription number detection (HIPAA filter)"
+    },
+    {
+      "rule_id": "contact.apartment_number",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Apartment number detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.city_state_zip",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "City/state/ZIP detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.email_address",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Email address detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.phone_us",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "US phone number detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.po_box",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "PO Box address detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.street_address",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Street address detection (CCPA filter)"
+    },
+    {
+      "rule_id": "contact.zip_code_us",
+      "pinned_version": "3.0.0",
+      "priority": 60,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "US ZIP code detection (CCPA filter)"
     }
   ],
   "overrides": [

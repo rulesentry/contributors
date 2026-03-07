@@ -19,14 +19,223 @@
     "identity",
     "contact"
   ],
-  "rule_categories": [
+  "rules": [
     {
-      "category_id": "personal",
-      "mode": "all"
+      "rule_id": "personal.age_explicit",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
     },
     {
-      "category_id": "contact",
-      "mode": "all"
+      "rule_id": "personal.age_range",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.biometric_data",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.blood_type",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.date_of_birth",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.date_of_birth_eu",
+      "pinned_version": "1.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.gender_marker",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.health_insurance_number",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.medical_record_number",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.patient_id",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "personal.prescription_number",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.apartment_number",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.city_state_zip",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.country_name",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.email_address",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.fax_number",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_australia",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_canada",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_china",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_france",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_germany",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_india",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_uk_landline",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_uk_mobile",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_us",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.po_box",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.postal_code_canada",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.postal_code_germany",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.postcode_uk",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.street_address",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.zip_code_us",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-07T00:00:00Z",
+      "attached_by": "claude-code"
     }
   ],
   "metadata": {
