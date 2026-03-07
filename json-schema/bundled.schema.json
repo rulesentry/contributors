@@ -275,7 +275,7 @@
       "properties": {
         "code": {
           "type": "string",
-          "pattern": "^(GLOBAL|MULTIPLE|[A-Z]{2,8}(-[A-Z]{2,3})?)$",
+          "pattern": "^(GLOBAL|[A-Z]{2,8}(-[A-Z]{2,3})?)$",
           "description": "Unique region code. GLOBAL, regional groupings (APAC, LATAM, AMERICAS, EU), ISO country codes (US, CA), or sub-regions (US-CA, DE-BY).",
           "examples": [
             "GLOBAL",
@@ -302,11 +302,10 @@
           ]
         },
         "parent_code": {
-          "type": [
-            "string",
-            "null"
+          "oneOf": [
+            { "$ref": "#/$defs/region__RegionCode" },
+            { "type": "null" }
           ],
-          "pattern": "^(GLOBAL|MULTIPLE|[A-Z]{2,8}(-[A-Z]{2,3})?)$",
           "description": "Parent region code. null for top-level, or a valid region code (GLOBAL, APAC, AMERICAS, EU, US, etc.).",
           "examples": [
             null,
@@ -326,12 +325,6 @@
             "subdivision"
           ],
           "description": "Hierarchy tier classification: global (worldwide), region (continental groupings like APAC, EU), country (nation-states), subdivision (states, provinces, territories)."
-        },
-        "tier": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 3,
-          "description": "Numeric hierarchy tier for efficient comparison. 0=global, 1=region, 2=country, 3=subdivision. Lower tier = broader scope."
         },
         "default_inheritance": {
           "type": "boolean",
@@ -353,7 +346,7 @@
           "items": {
             "type": "string"
           },
-          "description": "Associated regulatory frameworks.",
+          "description": "Advisory/UI-only metadata listing associated regulatory frameworks. Not used for engine logic — see profiles for compliance-framework-based rule selection.",
           "examples": [
             [
               "GDPR"
@@ -376,15 +369,14 @@
       "required": [
         "code",
         "name",
-        "level",
-        "tier"
+        "level"
       ],
       "additionalProperties": false
     },
     "region__RegionCode": {
       "type": "string",
-      "pattern": "^(GLOBAL|MULTIPLE|[A-Z]{2,8}(-[A-Z]{2,3})?)$",
-      "description": "Geographic region code. Accepts GLOBAL (worldwide), MULTIPLE (multi-jurisdiction), 2-3 character ISO country codes (US, CA, UK, SGP), regional groupings (APAC, LATAM, AFRICA, AMERICAS, MENA, OCEANIA, EU), and sub-regions with hyphen (US-CA for California, DE-BY for Bavaria, CA-QC for Quebec).",
+      "pattern": "^(GLOBAL|[A-Z]{2,8}(-[A-Z]{2,3})?)$",
+      "description": "Geographic region code. Accepts GLOBAL (worldwide), 2-3 character ISO country codes (US, CA, UK, SGP), regional groupings (APAC, LATAM, AFRICA, AMERICAS, MENA, OCEANIA, EU), and sub-regions with hyphen (US-CA for California, DE-BY for Bavaria, CA-QC for Quebec). Note: UK (not GB) is used for the United Kingdom for consistency with existing rules and data.",
       "examples": [
         "GLOBAL",
         "APAC",
@@ -2634,7 +2626,7 @@
           "description": "When true, selected regions expand to include ancestor regions (e.g., selecting US also includes AMERICAS and GLOBAL).",
           "default": true
         },
-        "excludeGlobal": {
+        "exclude_global": {
           "type": "boolean",
           "description": "When true, remove GLOBAL from the effective region set after ancestor expansion.",
           "default": false

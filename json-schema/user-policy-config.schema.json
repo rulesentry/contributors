@@ -130,7 +130,7 @@
           "description": "When true, selected regions expand to include ancestor regions (e.g., selecting US also includes AMERICAS and GLOBAL).",
           "default": true
         },
-        "excludeGlobal": {
+        "exclude_global": {
           "type": "boolean",
           "description": "When true, remove GLOBAL from the effective region set after ancestor expansion.",
           "default": false
