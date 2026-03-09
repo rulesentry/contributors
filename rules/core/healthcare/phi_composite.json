@@ -34,9 +34,13 @@
       }
     ],
     "effect": {
-      "type": "block",
+      "type": "transform",
       "rationale": "compliance",
-      "message": "PHI detected: medical record number combined with date of birth constitutes Protected Health Information under HIPAA. Content blocked pending review."
+      "message": "PHI detected: medical record number combined with date of birth constitutes Protected Health Information under HIPAA. Content tokenized for safe handling.",
+      "transform": {
+        "type": "tokenize",
+        "params": { "prefix": "PHI" }
+      }
     },
     "side_effects": [
       {
