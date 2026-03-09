@@ -6,12 +6,8 @@ Community-contributed rules, policies, categories, profiles, and regions for [Ru
 
 1. **Fork** this repository
 2. **Clone** your fork locally
-3. **Install** dependencies: `npm install`
-4. **Create** your rule, policy, or other entity (see below)
-5. **Validate** locally: `npm run ci`
-6. **Open a PR** to `main`
-
-GitHub Actions will automatically validate your contribution on every PR. On merge, changed entities are imported into the RuleSentry catalog.
+3. **Create** your rule, policy, or other entity (see below)
+4. **Open a PR** to `main`
 
 ## Directory Structure
 
@@ -40,10 +36,7 @@ contributors/
 │   └── {publisher}/
 ├── regions/
 │   └── core/                 # Region registry
-├── examples/                 # Example contributions (not imported)
-├── scripts/                  # Validation and import scripts
-├── json-schema/              # Vendored RuleSentry schemas (do not modify)
-└── .github/workflows/        # CI: validate on PR, import on merge
+└── LICENSE
 ```
 
 **Key conventions:**
@@ -70,7 +63,7 @@ contributors/
 
    ```json
    {
-     "$schema": "../../../json-schema/rule.schema.json",
+     "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
      "id": "{category}.{rule-name}",
      "qualified_id": "community.{your-id}.{category}.{rule-name}",
      "type": "rule",
@@ -105,10 +98,7 @@ contributors/
    }
    ```
 
-3. **Validate**: `npm run ci`
-4. **Open a PR**
-
-See `examples/rules/contact/mx-phone-number.json` for a complete example.
+3. **Open a PR**
 
 ## Contributing a Policy
 
@@ -118,8 +108,6 @@ Policies assemble rules via direct references, category inclusion, and filters. 
 - **Core rules** — built-in RuleSentry rules (e.g., `government.ssn_format`)
 
 Create your policy in `policies/{your-id}/` and follow the same `community.{your-id}.*` ID convention.
-
-See `examples/policies/mx-pii-policy.json` for a complete example.
 
 ## ID Conventions
 
@@ -132,44 +120,9 @@ See `examples/policies/mx-pii-policy.json` for a complete example.
 - Community publishers must be registered in `publishers/{id}.json`
 - File path should reflect the ID: `rules/{publisher}/{category}/{rule-name}.json`
 
-## Validation
-
-Two validation scripts run in CI:
-
-- **`npm run validate`** — JSON Schema validation against vendored RuleSentry schemas
-- **`npm run check`** — Convention checks (ID namespacing, publisher registration, directory sync)
-- **`npm run ci`** — Runs both
-
-Run locally before opening a PR:
-
-```bash
-npm install
-npm run ci
-```
-
-## Catalog Import
-
-When a PR is merged to `main`, the **import-catalog** workflow automatically detects changed entity files and imports them into the RuleSentry catalog API. Entities then appear in the desktop app's Store tab.
-
-For initial seeding, use the bulk import script:
-
-```bash
-IMPORT_API_KEY=<key> API_URL=https://api.rulesentry.io ./scripts/import-all.sh
-```
-
 ## Schema Reference
 
-The `json-schema/` directory contains the canonical RuleSentry schemas. These are vendored from the main repository and should not be modified. Key schemas:
-
-| Schema | Validates |
-|--------|-----------|
-| `rule.schema.json` | Rule definitions |
-| `policy.schema.json` | Policy definitions |
-| `category.schema.json` | Category definitions |
-| `profile.schema.json` | Profile definitions |
-| `region.schema.json` | Region definitions |
-| `base.schema.json` | Shared base types (Origin, ID patterns) |
-| `rule-evaluation.schema.json` | Evaluation types, effects, transforms |
+For the canonical JSON schemas that define rule, policy, category, profile, and region formats, see the `json-schema/` directory in the [main RuleSentry repository](https://github.com/rulesentry/rulesentry).
 
 Full schema documentation: [rulesentry.io/docs/schemas](https://rulesentry.io/docs/schemas)
 
