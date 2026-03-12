@@ -3,7 +3,7 @@
   "id": "financial.bic_swift",
   "qualified_id": "core.financial.bic_swift",
   "type": "rule",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "name": "BIC/SWIFT Code",
   "description": "Detects BIC (Bank Identifier Code) / SWIFT codes used for international wire transfers. Format: 4 letters (bank) + 2 letters (country) + 2 chars (location) + optional 3 chars (branch).",
   "category_id": "financial",
@@ -24,7 +24,11 @@
     "target": "content",
     "pattern": {
       "pattern": "\\b[A-Z]{4}(?:US|GB|DE|FR|CA|AU|JP|CN|IN|BR|IT|ES|NL|BE|CH|SE|NO|DK|FI|AT|IE|PT|GR|PL|CZ|HK|SG|AE|SA|ZA|MX|KR|TW|TH|MY|ID|PH|VN|NZ|LU|MT|CY|RU|UA|TR|IL|EG|NG|KE|GH|PK|BD|LK|NP|MM|KH|LA|BN|MO|MN|KZ|UZ|AZ|GE|AM|BY|MD|RS|HR|SI|SK|BG|RO|HU|LT|LV|EE|IS|AL|BA|MK|ME|XK|MA|TN|DZ|LY|SD|ET|TZ|UG|RW|SN|CI|CM|AO|MZ|ZM|ZW|BW|NA|MU|SC|MG|QA|KW|BH|OM|JO|LB|IQ|IR|YE|PY|UY|BO|EC|PE|CO|VE|CL|AR|CR|PA|DO|GT|HN|SV|NI|CU|JM|TT|BB|LC|VC|GD|AG|DM|BS|HT|BZ|GY|SR|TC|KY|VG|VI|PR|GU|AS|MP|PW|FM|MH|NR|TV|KI|SB|VU|TO|WS|FJ|PG|CK|WF|TK|NU|PF|NC|GF|GP|MQ|RE|YT|PM|MF|BL|SX|CW|AW|BQ|AI|MS|SH|AC|TA|IO|FK|GS|AQ|BV|HM|TF|UM|GL|FO|SJ|AX|GI|IM|JE|GG)[A-Z0-9]{2}(?:[A-Z0-9]{3})?\\b",
-      "engine": "regex"
+      "engine": "regex",
+      "validator": "length_check",
+      "validator_params": {
+        "exact": [8, 11]
+      }
     },
     "effect": {
       "type": "transform",
