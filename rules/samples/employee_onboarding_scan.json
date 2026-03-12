@@ -1,0 +1,62 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "samples.employee_onboarding_scan",
+  "qualified_id": "samples.employee_onboarding_scan",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "Employee Onboarding Document Scanner",
+  "summary": "Detects SSN + credit card co-occurrence in HR onboarding documents",
+  "description": "Composite rule demonstrating multi-signal detection for HR onboarding workflows. Fires when BOTH an SSN and a credit card number appear in the same document, indicating a direct deposit or benefits enrollment form that requires elevated handling. Each referenced rule validates independently (SSA format check, Luhn checksum), and the composite triggers only when both signals are present.",
+  "category_id": "government",
+  "rule_kind": "composite",
+  "severity": "critical",
+  "profiles": ["production"],
+  "regions": ["US"],
+  "tags": ["sample", "composite", "hr", "onboarding", "pii", "pci"],
+  "origin": {
+    "source_type": "sample",
+    "publisher": "rulesentry"
+  },
+  "metadata": {
+    "use_case": "HR onboarding document triage",
+    "audience": "Demonstrates composite rule_ref evaluation with cross-domain detection",
+    "sample_input": "New hire: Jane Doe, SSN 078-05-1120, direct deposit Visa 4539578763621486."
+  },
+  "evaluation": {
+    "evaluation_type": "composite",
+    "operator": "all",
+    "evaluations": [
+      {
+        "evaluation_type": "rule_ref",
+        "rule_id": "government.ssn_format",
+        "pinned_version": "3.0.0"
+      },
+      {
+        "evaluation_type": "rule_ref",
+        "rule_id": "financial.credit_card_luhn",
+        "pinned_version": "3.0.0"
+      }
+    ],
+    "propagate_matches": true,
+    "effect": {
+      "type": "block",
+      "rationale": "compliance",
+      "message": "Document contains SSN + credit card: route to secure HR processing"
+    },
+    "side_effects": [
+      {
+        "type": "audit",
+        "level": "warn",
+        "target": "hr-compliance-log",
+        "config": {
+          "include_rule_id": true,
+          "include_match_count": true,
+          "alert": true
+        }
+      }
+    ]
+  },
+  "status": "active",
+  "created_at": "2026-03-12T00:00:00Z",
+  "updated_at": "2026-03-12T00:00:00Z"
+}
