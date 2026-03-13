@@ -7,7 +7,7 @@
   "name": "Healthcare & Life Sciences",
   "caption": "Healthcare",
   "description": "Industry context profile for healthcare and life sciences organizations: hospitals, clinics, health plans, pharmaceutical companies, medical device manufacturers, and health technology providers. Use to identify rules relevant to clinical and operational data in healthcare deployments. Orthogonal to compliance profiles — a healthcare organization may also need HIPAA (regulatory) and ISO 27001 (security standard).",
-  "profile_type": "industry_context",
+  "profile_type": "industry",
   "frameworks": [],
   "display_order": 110,
   "is_system": true,

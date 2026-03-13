@@ -7,7 +7,7 @@
   "name": "Government & Public Sector",
   "caption": "Government",
   "description": "Industry context profile for government and public sector organizations: federal agencies, state and local governments, courts, military organizations, and public utilities. Use to identify rules relevant to government-issued identifiers, citizen records, and classified data in public sector deployments. Orthogonal to compliance profiles — US federal agencies may also need NIST 800-53 and FISMA (regulatory).",
-  "profile_type": "industry_context",
+  "profile_type": "industry",
   "frameworks": [],
   "display_order": 130,
   "is_system": true,
