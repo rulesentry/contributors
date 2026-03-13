@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "government.fi_hetu",
+  "qualified_id": "core.government.fi_hetu",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "Finnish Personal Identity Code (HETU)",
+  "description": "Detects Finnish personal identity codes (henkilötunnus, HETU). Format: DDMMYY[+/-/A]NNNx where the century marker distinguishes 1800s (+), 1900s (-), and 2000s (A), followed by a 3-digit ordinal and a checksum character.",
+  "category_id": "government",
+  "rule_kind": "atomic",
+  "severity": "critical",
+  "profiles": [
+    "gdpr",
+    "production"
+  ],
+  "metadata": {
+    "format": "DDMMYY[+/-/A]NNNx — century marker + 3-digit ordinal + checksum char from 0-9A-FHJKLMNPRSTUVWXY",
+    "note": "GDPR - personal data, Finnish Traficom regulation",
+    "needs_review": false
+  },
+  "evaluation": {
+    "evaluation_type": "pattern_match",
+    "priority": 90,
+    "target": "content",
+    "pattern": {
+      "pattern": "\\b\\d{6}[+\\-A]\\d{3}[0-9A-FHJKLMNPRSTUVWXY]\\b"
+    },
+    "effect": {
+      "type": "transform",
+      "rationale": "compliance",
+      "transform": {
+        "type": "tokenize",
+        "params": {
+          "prefix": "HETU",
+          "reversible": false
+        }
+      },
+      "message": "Finnish HETU tokenized for de-identification"
+    }
+  },
+  "status": "active",
+  "created_at": "2026-03-13T00:00:00Z",
+  "updated_at": "2026-03-13T00:00:00Z",
+  "regions": [
+    "FI"
+  ]
+}

@@ -5,9 +5,9 @@
   "version": "3.0.0",
   "status": "active",
   "name": "Personal Information",
-  "description": "Rules detecting personally identifiable information (PII) such as dates of birth, names, and other personal identifiers.",
+  "description": "Rules detecting demographic and biometric personal attributes: dates of birth, age, gender markers, and biometric data. Covers purely identity-descriptive attributes that are not healthcare-specific. For healthcare identifiers (health insurance numbers, medical record numbers, patient IDs, prescription numbers, blood type), see the healthcare category.",
   "frameworks": ["HIPAA", "GDPR", "CCPA"],
-  "examples": ["date of birth", "full name", "age", "gender"],
+  "examples": ["date of birth", "full name", "age", "gender", "biometric data"],
   "display_order": 10,
   "is_system": true,
   "origin": {
@@ -16,6 +16,6 @@
   },
   "created_at": "2026-02-10T00:00:00Z",
   "created_by": "rulesentry-catalog",
-  "modified_at": "2026-02-10T00:00:00Z",
+  "modified_at": "2026-03-13T00:00:00Z",
   "modified_by": "claude-code"
 }

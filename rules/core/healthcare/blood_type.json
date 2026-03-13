@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
-  "id": "personal.blood_type",
-  "qualified_id": "core.personal.blood_type",
+  "id": "healthcare.blood_type",
+  "qualified_id": "core.healthcare.blood_type",
   "type": "rule",
   "version": "3.0.0",
   "name": "Blood Type",
   "description": "Detects blood type mentions (e.g., 'Blood Type: O+', 'A-', 'AB+'). Considered sensitive health data under GDPR Article 9 and HIPAA PHI.",
-  "category_id": "personal",
+  "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
@@ -45,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:52:26.987271Z",
+  "updated_at": "2026-03-13T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

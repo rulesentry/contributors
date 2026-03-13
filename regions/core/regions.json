@@ -319,6 +319,91 @@
       "display_order": 345
     },
     {
+      "code": "BE",
+      "name": "Belgium",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇧🇪",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 346
+    },
+    {
+      "code": "AT",
+      "name": "Austria",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇦🇹",
+      "frameworks": [
+        "GDPR",
+        "DSG"
+      ],
+      "display_order": 347
+    },
+    {
+      "code": "PL",
+      "name": "Poland",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇵🇱",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 348
+    },
+    {
+      "code": "FI",
+      "name": "Finland",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇫🇮",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 349
+    },
+    {
+      "code": "SE",
+      "name": "Sweden",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇸🇪",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 351
+    },
+    {
+      "code": "PT",
+      "name": "Portugal",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇵🇹",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 352
+    },
+    {
+      "code": "DK",
+      "name": "Denmark",
+      "level": "country",
+      "parent_code": "EU",
+      "default_inheritance": true,
+      "flag_emoji": "🇩🇰",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 353
+    },
+    {
       "code": "UK",
       "name": "United Kingdom",
       "level": "country",
@@ -378,6 +463,30 @@
       "default_inheritance": true,
       "flag_emoji": "🇶🇦",
       "display_order": 390
+    },
+    {
+      "code": "NO",
+      "name": "Norway",
+      "level": "country",
+      "parent_code": "EMEA",
+      "default_inheritance": true,
+      "flag_emoji": "🇳🇴",
+      "frameworks": [
+        "GDPR"
+      ],
+      "display_order": 395
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland",
+      "level": "country",
+      "parent_code": "EMEA",
+      "default_inheritance": true,
+      "flag_emoji": "🇨🇭",
+      "frameworks": [
+        "nFADP"
+      ],
+      "display_order": 396
     },
     {
       "code": "EG",
@@ -546,6 +655,42 @@
         "PDPA"
       ],
       "display_order": 444
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia",
+      "level": "country",
+      "parent_code": "APAC",
+      "default_inheritance": true,
+      "flag_emoji": "🇲🇾",
+      "frameworks": [
+        "PDPA 2010"
+      ],
+      "display_order": 445
+    },
+    {
+      "code": "PH",
+      "name": "Philippines",
+      "level": "country",
+      "parent_code": "APAC",
+      "default_inheritance": true,
+      "flag_emoji": "🇵🇭",
+      "frameworks": [
+        "DPA 2012"
+      ],
+      "display_order": 446
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand",
+      "level": "country",
+      "parent_code": "APAC",
+      "default_inheritance": true,
+      "flag_emoji": "🇳🇿",
+      "frameworks": [
+        "Privacy Act 2020"
+      ],
+      "display_order": 447
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
-  "id": "personal.prescription_number",
-  "qualified_id": "core.personal.prescription_number",
+  "id": "healthcare.medical_record_number",
+  "qualified_id": "core.healthcare.medical_record_number",
   "type": "rule",
   "version": "3.0.0",
-  "name": "Prescription Number (Rx)",
-  "description": "Detects prescription numbers with 'Rx:', 'Rx#', or 'Prescription Number:' context. HIPAA PHI.",
-  "category_id": "personal",
+  "name": "Medical Record Number (MRN)",
+  "description": "Detects medical record numbers with explicit 'MRN:', 'Medical Record:', or 'Chart Number:' context. Format varies by healthcare provider.",
+  "category_id": "healthcare",
   "rule_kind": "atomic",
-  "severity": "high",
+  "severity": "critical",
   "profiles": [
     "hipaa",
     "production"
@@ -21,10 +21,10 @@
   },
   "evaluation": {
     "evaluation_type": "pattern_match",
-    "priority": 80,
+    "priority": 90,
     "target": "content",
     "pattern": {
-      "pattern": "\\b(?:Rx|Prescription\\s+(?:Number|No\\.?|#))[:\\s]+[A-Z0-9-]{6,15}\\b",
+      "pattern": "\\b(?:MRN|Medical\\s+Record\\s+(?:Number|No\\.?|#)?|Chart\\s+(?:Number|No\\.?|#)?)[:\\s]+[A-Z0-9-]{6,20}\\b",
       "engine": "regex",
       "flags": {
         "case_insensitive": true
@@ -36,17 +36,17 @@
       "transform": {
         "type": "tokenize",
         "params": {
-          "prefix": "RX",
+          "prefix": "MRN",
           "reversible": false
         }
       },
-      "message": "Prescription number tokenized for de-identification"
+      "message": "Medical record number tokenized for de-identification"
     }
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:52:26.987271Z",
+  "updated_at": "2026-03-13T00:00:00Z",
   "regions": [
-    "GLOBAL"
+    "US"
   ]
 }
