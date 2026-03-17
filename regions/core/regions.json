@@ -135,13 +135,169 @@
       "display_order": 108
     },
     {
+      "code": "US-CT",
+      "name": "Connecticut",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "CTDPA"
+      ],
+      "display_order": 110
+    },
+    {
+      "code": "US-DE",
+      "name": "Delaware",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "DPDPA"
+      ],
+      "display_order": 111
+    },
+    {
+      "code": "US-IA",
+      "name": "Iowa",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "IA-CDPA"
+      ],
+      "display_order": 112
+    },
+    {
+      "code": "US-IN",
+      "name": "Indiana",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "IN-CDPA"
+      ],
+      "display_order": 113
+    },
+    {
+      "code": "US-KY",
+      "name": "Kentucky",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "KY-CDPA"
+      ],
+      "display_order": 114
+    },
+    {
+      "code": "US-MD",
+      "name": "Maryland",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "MODPA"
+      ],
+      "display_order": 115
+    },
+    {
+      "code": "US-MT",
+      "name": "Montana",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "MCDPA"
+      ],
+      "display_order": 116
+    },
+    {
+      "code": "US-NE",
+      "name": "Nebraska",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "NDPA"
+      ],
+      "display_order": 117
+    },
+    {
+      "code": "US-NH",
+      "name": "New Hampshire",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "NHPA"
+      ],
+      "display_order": 118
+    },
+    {
       "code": "US-NJ",
       "name": "New Jersey",
       "level": "subdivision",
       "parent_code": "US",
       "default_inheritance": true,
       "flag_emoji": "🇺🇸",
-      "display_order": 109
+      "display_order": 119
+    },
+    {
+      "code": "US-OR",
+      "name": "Oregon",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "OR-CPA"
+      ],
+      "display_order": 120
+    },
+    {
+      "code": "US-RI",
+      "name": "Rhode Island",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "RI-DTPPA"
+      ],
+      "display_order": 121
+    },
+    {
+      "code": "US-TN",
+      "name": "Tennessee",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "TIPA"
+      ],
+      "display_order": 122
+    },
+    {
+      "code": "US-UT",
+      "name": "Utah",
+      "level": "subdivision",
+      "parent_code": "US",
+      "default_inheritance": true,
+      "flag_emoji": "🇺🇸",
+      "frameworks": [
+        "UCPA"
+      ],
+      "display_order": 123
     },
     {
       "code": "CA",
