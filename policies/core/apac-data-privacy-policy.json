@@ -3,7 +3,7 @@
   "id": "policy.apac-data-privacy",
   "qualified_id": "core.policy.apac-data-privacy",
   "type": "policy",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "status": "active",
   "name": "APAC Data Privacy Policy",
   "description": "Data privacy policy for Asia-Pacific jurisdictions. Covers Singapore PDPA, Japan APPI, Australia Privacy Act, India DPDP Act, and government ID detection across AU, JP, IN, CN, HK, KR, TW, and TH.",
@@ -101,6 +101,62 @@
       "attached_at": "2026-02-26T00:00:00Z",
       "attached_by": "claude-code",
       "notes": "Thailand Citizen ID detection for PDPA compliance"
+    },
+    {
+      "rule_id": "government.australian_abn",
+      "pinned_version": "3.0.0",
+      "priority": 65,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Australian Business Number (Privacy Act 1988)"
+    },
+    {
+      "rule_id": "government.australian_acn",
+      "pinned_version": "3.0.0",
+      "priority": 65,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Australian Company Number (Privacy Act 1988)"
+    },
+    {
+      "rule_id": "government.australian_medicare",
+      "pinned_version": "3.0.0",
+      "priority": 80,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Australian Medicare card number (Privacy Act 1988)"
+    },
+    {
+      "rule_id": "government.indian_pan",
+      "pinned_version": "3.0.0",
+      "priority": 80,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Indian PAN (Permanent Account Number) — DPDP Act 2023"
+    },
+    {
+      "rule_id": "government.nz_driver_license",
+      "pinned_version": "3.0.0",
+      "priority": 65,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "New Zealand driver's licence (Privacy Act 2020)"
+    },
+    {
+      "rule_id": "government.nz_ird",
+      "pinned_version": "3.0.0",
+      "priority": 75,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "New Zealand IRD (tax) number (Privacy Act 2020)"
+    },
+    {
+      "rule_id": "government.nz_passport",
+      "pinned_version": "3.0.0",
+      "priority": 80,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "New Zealand passport number (Privacy Act 2020)"
     }
   ],
   "metadata": {

@@ -3,7 +3,7 @@
   "id": "policy.pii",
   "qualified_id": "core.policy.pii",
   "type": "policy",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "status": "active",
   "name": "PII Protection Policy",
   "description": "Global baseline policy for personally identifiable information. Covers personal attributes and contact information across all regions. Government ID detection is delegated to regional policies (US-PII, EU-GDPR, UK-DPA, APAC, Americas, EMEA).",
@@ -42,11 +42,12 @@
       "attached_by": "claude-code"
     },
     {
-      "rule_id": "personal.blood_type",
+      "rule_id": "healthcare.blood_type",
       "pinned_version": "3.0.0",
       "priority": 40,
       "attached_at": "2026-03-07T00:00:00Z",
-      "attached_by": "claude-code"
+      "attached_by": "claude-code",
+      "notes": "Blood type detection (global healthcare)"
     },
     {
       "rule_id": "personal.date_of_birth",
@@ -70,32 +71,20 @@
       "attached_by": "claude-code"
     },
     {
-      "rule_id": "personal.health_insurance_number",
+      "rule_id": "healthcare.health_insurance_number",
       "pinned_version": "3.0.0",
       "priority": 40,
       "attached_at": "2026-03-07T00:00:00Z",
-      "attached_by": "claude-code"
+      "attached_by": "claude-code",
+      "notes": "Generic health insurance number (global)"
     },
     {
-      "rule_id": "personal.medical_record_number",
+      "rule_id": "healthcare.prescription_number",
       "pinned_version": "3.0.0",
       "priority": 40,
       "attached_at": "2026-03-07T00:00:00Z",
-      "attached_by": "claude-code"
-    },
-    {
-      "rule_id": "personal.patient_id",
-      "pinned_version": "3.0.0",
-      "priority": 40,
-      "attached_at": "2026-03-07T00:00:00Z",
-      "attached_by": "claude-code"
-    },
-    {
-      "rule_id": "personal.prescription_number",
-      "pinned_version": "3.0.0",
-      "priority": 40,
-      "attached_at": "2026-03-07T00:00:00Z",
-      "attached_by": "claude-code"
+      "attached_by": "claude-code",
+      "notes": "Prescription number detection (global)"
     },
     {
       "rule_id": "contact.apartment_number",
@@ -236,6 +225,22 @@
       "priority": 40,
       "attached_at": "2026-03-07T00:00:00Z",
       "attached_by": "claude-code"
+    },
+    {
+      "rule_id": "contact.phone_international",
+      "pinned_version": "3.0.0",
+      "priority": 40,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "International phone number detection (global)"
+    },
+    {
+      "rule_id": "personal.date",
+      "pinned_version": "3.0.0",
+      "priority": 35,
+      "attached_at": "2026-03-17T00:00:00Z",
+      "attached_by": "claude-code",
+      "notes": "Bare date detection (low severity, global)"
     }
   ],
   "metadata": {
