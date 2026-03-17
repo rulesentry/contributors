@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "government.asia_south_korea_frn",
+  "qualified_id": "core.government.asia_south_korea_frn",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "South Korean Foreigner Registration Number (FRN)",
+  "description": "Detects Korean Foreigner Registration Numbers (외국인등록번호) with checksum validation. Same structure as RRN but gender digit is 5-8 (indicating foreign national).",
+  "category_id": "government",
+  "rule_kind": "atomic",
+  "severity": "critical",
+  "profiles": [
+    "production"
+  ],
+  "metadata": {
+    "country": "South Korea",
+    "pattern_source": "Based on Presidio KrFrnRecognizer",
+    "attribution": "https://github.com/microsoft/presidio",
+    "validator_algorithm": "Weighted sum modulo checksum (same as RRN)",
+    "format": "6 digits (YYMMDD) + dash + gender digit (5-8) + 6 digits",
+    "official_name": "외국인등록번호 (Foreigner Registration Number)",
+    "note": "PIPA (Personal Information Protection Act) requires strict handling",
+    "needs_review": false
+  },
+  "evaluation": {
+    "evaluation_type": "pattern_match",
+    "priority": 90,
+    "target": "content",
+    "pattern": {
+      "pattern": "\\b\\d{6}-?[5-8]\\d{6}\\b",
+      "engine": "regex",
+      "validator": "rrn_checksum"
+    },
+    "effect": {
+      "type": "transform",
+      "rationale": "compliance",
+      "transform": {
+        "type": "redact",
+        "params": {
+          "marker": "[KR_FRN]"
+        }
+      },
+      "message": "Korean FRN redacted per PIPA (Personal Information Protection Act)"
+    }
+  },
+  "status": "active",
+  "created_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-17T00:00:00Z",
+  "regions": [
+    "KR"
+  ]
+}

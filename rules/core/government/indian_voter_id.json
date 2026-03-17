@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "government.indian_voter_id",
+  "qualified_id": "core.government.indian_voter_id",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "Indian Voter ID (EPIC)",
+  "description": "Detects Indian Elector's Photo Identity Card (EPIC) numbers. Format: 3 letters followed by 7 digits. Context-anchored to reduce false positives.",
+  "category_id": "government",
+  "rule_kind": "atomic",
+  "severity": "medium",
+  "profiles": [
+    "production"
+  ],
+  "metadata": {
+    "country": "India",
+    "pattern_source": "Based on Presidio InVoterRecognizer",
+    "attribution": "https://github.com/microsoft/presidio",
+    "format": "ABC1234567 (3 letters + 7 digits)",
+    "official_name": "Elector's Photo Identity Card (EPIC)",
+    "note": "Weak pattern; context prefix required to reduce false positives",
+    "needs_review": false
+  },
+  "evaluation": {
+    "evaluation_type": "pattern_match",
+    "priority": 60,
+    "target": "content",
+    "pattern": {
+      "pattern": "(?:voter\\s+(?:id|card)|EPIC|elector(?:'s)?\\s+(?:photo\\s+)?identity\\s+card|voter\\s+(?:no|number|num|#))[\\s:# -]*([A-Z]{3}\\d{7})\\b",
+      "engine": "regex",
+      "flags": {
+        "case_insensitive": true
+      }
+    },
+    "effect": {
+      "type": "transform",
+      "rationale": "compliance",
+      "transform": {
+        "type": "tokenize",
+        "params": {
+          "prefix": "IN_VOTER",
+          "reversible": false
+        }
+      },
+      "message": "Indian voter ID (EPIC) tokenized for de-identification"
+    }
+  },
+  "status": "active",
+  "created_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-17T00:00:00Z",
+  "regions": [
+    "IN"
+  ]
+}

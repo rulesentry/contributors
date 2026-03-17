@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "government.indian_gstin",
+  "qualified_id": "core.government.indian_gstin",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "Indian GSTIN (GST Identification Number)",
+  "description": "Detects Indian Goods and Services Tax Identification Numbers. Format: 2-digit state code (01-37) + PAN structure (5 letters + 4 digits + 1 letter) + registration digit + Z + check character.",
+  "category_id": "government",
+  "rule_kind": "atomic",
+  "severity": "high",
+  "profiles": [
+    "production"
+  ],
+  "metadata": {
+    "country": "India",
+    "pattern_source": "Based on Presidio InGstinRecognizer",
+    "attribution": "https://github.com/microsoft/presidio",
+    "format": "15 characters: 2-digit state code + PAN (10 chars) + registration digit + Z + check char",
+    "official_name": "Goods and Services Tax Identification Number (GSTIN)",
+    "note": "State code 01-37 and mandatory Z at position 14 validated by regex structure",
+    "needs_review": false
+  },
+  "evaluation": {
+    "evaluation_type": "pattern_match",
+    "priority": 85,
+    "target": "content",
+    "pattern": {
+      "pattern": "\\b(?:0[1-9]|[1-2][0-9]|3[0-7])[A-Z]{5}\\d{4}[A-Z]\\dZ[A-Z0-9]\\b",
+      "engine": "regex"
+    },
+    "effect": {
+      "type": "transform",
+      "rationale": "compliance",
+      "transform": {
+        "type": "tokenize",
+        "params": {
+          "prefix": "IN_GSTIN",
+          "reversible": false
+        }
+      },
+      "message": "Indian GSTIN tokenized for de-identification"
+    }
+  },
+  "status": "active",
+  "created_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-17T00:00:00Z",
+  "regions": [
+    "IN"
+  ]
+}

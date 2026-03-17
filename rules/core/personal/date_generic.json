@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.rulesentry.io/schema/v3/core/rule.schema.json",
+  "id": "personal.date_generic",
+  "qualified_id": "core.personal.date_generic",
+  "type": "rule",
+  "version": "3.0.0",
+  "name": "Generic Date Detection",
+  "description": "Detects standalone dates in common formats without requiring context keywords. Covers ISO 8601 (YYYY-MM-DD), US/EU slash (MM/DD/YYYY or DD/MM/YYYY), and European dot (DD.MM.YYYY) formats.",
+  "category_id": "personal",
+  "rule_kind": "atomic",
+  "severity": "medium",
+  "profiles": [
+    "hipaa",
+    "gdpr",
+    "ccpa",
+    "production"
+  ],
+  "metadata": {
+    "pattern_source": "Based on Presidio DateRecognizer patterns",
+    "attribution": "https://github.com/microsoft/presidio",
+    "formats": [
+      "YYYY-MM-DD",
+      "MM/DD/YYYY",
+      "DD/MM/YYYY",
+      "DD.MM.YYYY"
+    ],
+    "note": "Broader than date_of_birth (no context prefix required). Useful for general PII detection where any date may be sensitive.",
+    "needs_review": false
+  },
+  "evaluation": {
+    "evaluation_type": "pattern_match",
+    "priority": 60,
+    "target": "content",
+    "pattern": {
+      "pattern": "\\b(?:\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])|(?:0?[1-9]|1[0-2])/(?:0?[1-9]|[12]\\d|3[01])/(?:19|20)\\d{2}|(?:0?[1-9]|[12]\\d|3[01])\\.(?:0?[1-9]|1[0-2])\\.(?:19|20)\\d{2})\\b",
+      "engine": "regex"
+    },
+    "effect": {
+      "type": "transform",
+      "rationale": "compliance",
+      "transform": {
+        "type": "redact",
+        "params": {
+          "marker": "[DATE]"
+        }
+      },
+      "message": "Date redacted per privacy policy"
+    }
+  },
+  "status": "active",
+  "created_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-17T00:00:00Z",
+  "regions": [
+    "GLOBAL"
+  ]
+}
