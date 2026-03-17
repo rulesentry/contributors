@@ -3,7 +3,7 @@
   "id": "healthcare.hospital_account_number",
   "qualified_id": "core.healthcare.hospital_account_number",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "name": "Hospital Account Number",
   "description": "Detects hospital and facility patient account numbers and encounter identifiers. Format: 6-12 alphanumeric characters with contextual keywords (hospital, facility, account).",
   "category_id": "healthcare",
@@ -27,7 +27,7 @@
     "evaluation_type": "pattern_match",
     "target": "content",
     "pattern": {
-      "pattern": "(?i)\\b(?:hospital|facility|account)\\s*(?:number|#|id)?\\s*:?\\s*([A-Z0-9]{6,12})\\b",
+      "pattern": "(?i)\\b(?:hospital|facility|account)\\s*(?:(?:number|#|id)\\s*:?\\s*|:\\s*)([A-Z0-9]{6,12})\\b",
       "engine": "regex"
     },
     "effect": {
