@@ -3,7 +3,7 @@
   "id": "financial.uk_sort_code",
   "qualified_id": "core.financial.uk_sort_code",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "name": "UK Sort Code (Format Validated)",
   "description": "Detects UK bank sort codes with format validation. Sort codes identify UK bank branches.",
   "category_id": "financial",
@@ -16,7 +16,7 @@
   "metadata": {
     "pattern_source": "Based on OpenRedaction community patterns",
     "attribution": "https://github.com/openredact/openredact",
-    "validator_algorithm": "UK sort code format (6 digits)",
+    "validator_algorithm": "UK sort code format (formatted variants only: DD-DD-DD or DD DD DD)",
     "needs_review": false
   },
   "evaluation": {
@@ -24,7 +24,7 @@
     "priority": 80,
     "target": "content",
     "pattern": {
-      "pattern": "\\b(?:\\d{2}-\\d{2}-\\d{2}|\\d{2}\\s\\d{2}\\s\\d{2}|\\d{6})\\b",
+      "pattern": "\\b(?:\\d{2}-\\d{2}-\\d{2}|\\d{2}\\s\\d{2}\\s\\d{2})\\b",
       "engine": "regex",
       "validator": "sort_code_format"
     },
@@ -43,7 +43,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-18T00:00:00Z",
   "regions": [
     "UK"
   ]

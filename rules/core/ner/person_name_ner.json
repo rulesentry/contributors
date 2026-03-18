@@ -22,12 +22,14 @@
     },
     "effect": {
       "type": "transform",
+      "rationale": "compliance",
       "transform": {
         "type": "replace",
         "params": {
           "replacement": "[PERSON]"
         }
-      }
+      },
+      "message": "Person name detected by NER replaced for de-identification"
     }
   },
   "origin": {
