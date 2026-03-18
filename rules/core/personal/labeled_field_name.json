@@ -3,9 +3,9 @@
   "id": "personal.labeled_field_name",
   "qualified_id": "core.personal.labeled_field_name",
   "type": "rule",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "name": "Person Name (Labeled Field)",
-  "description": "Detects person names in labeled form fields (Name:, Employee Name:, Full Name:, Contact Name:). Matches title-case First Last patterns following a name label. Serves as a deterministic fallback where NER model confidence is insufficient for structured form data.",
+  "description": "Detects person names in labeled form fields (Name:, Employee Name:, Full Name:, Contact Name:, Agent:). Matches title-case First Last patterns following a name label. Serves as a deterministic fallback where NER model confidence is insufficient for structured form data.",
   "category_id": "personal",
   "rule_kind": "atomic",
   "severity": "high",
@@ -17,7 +17,7 @@
     "priority": 70,
     "target": "content",
     "pattern": {
-      "pattern": "(?mi)^\\s*(?:employee\\s+name|full\\s+name|contact\\s+name|name)\\s*:\\s*[A-Z][a-z]+(?:\\s+[A-Z][a-z]+){1,3}\\b",
+      "pattern": "(?mi)^\\s*(?:employee\\s+name|full\\s+name|contact\\s+name|agent|name)\\s*:\\s*[A-Z][a-z]+(?:[ \\t]+[A-Z][a-z]+){1,3}\\b",
       "engine": "regex"
     },
     "effect": {
