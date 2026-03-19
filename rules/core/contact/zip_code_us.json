@@ -3,7 +3,7 @@
   "id": "contact.zip_code_us",
   "qualified_id": "core.contact.zip_code_us",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "US ZIP Code",
   "description": "Detects US ZIP codes in 5-digit (XXXXX) and ZIP+4 (XXXXX-XXXX) formats.",
   "category_id": "contact",
@@ -27,7 +27,7 @@
     "priority": 60,
     "target": "content",
     "pattern": {
-      "pattern": "\\b\\d{5}(?:-\\d{4})?\\b",
+      "pattern": "(?<!#)\\b\\d{5}(?:-\\d{4})?\\b",
       "engine": "regex"
     },
     "effect": {
@@ -45,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:52:26.946580Z",
+  "updated_at": "2026-03-20T00:00:00Z",
   "regions": [
     "US"
   ]
