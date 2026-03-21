@@ -3,13 +3,14 @@
   "id": "government.fi_hetu",
   "qualified_id": "core.government.fi_hetu",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Finnish Personal Identity Code (HETU)",
   "description": "Detects Finnish personal identity codes (henkilötunnus, HETU). Format: DDMMYY[+/-/A]NNNx where the century marker distinguishes 1800s (+), 1900s (-), and 2000s (A), followed by a 3-digit ordinal and a checksum character.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "government-sector",
     "gdpr",
     "production"
   ],
@@ -40,7 +41,7 @@
   },
   "status": "active",
   "created_at": "2026-03-13T00:00:00Z",
-  "updated_at": "2026-03-13T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "FI"
   ]

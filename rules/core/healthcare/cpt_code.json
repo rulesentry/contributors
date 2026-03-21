@@ -3,7 +3,7 @@
   "id": "healthcare.cpt_code",
   "qualified_id": "core.healthcare.cpt_code",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "status": "active",
   "name": "CPT Procedure Code",
   "summary": "Detects CPT (Current Procedural Terminology) codes with context markers",
@@ -11,9 +11,21 @@
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "medium",
-  "profiles": ["hipaa", "production"],
-  "regions": ["US"],
-  "tags": ["phi", "healthcare", "procedure", "billing", "clinical"],
+  "profiles": [
+    "healthcare-industry",
+    "hipaa",
+    "production"
+  ],
+  "regions": [
+    "US"
+  ],
+  "tags": [
+    "phi",
+    "healthcare",
+    "procedure",
+    "billing",
+    "clinical"
+  ],
   "metadata": {
     "compliance_notes": "CPT codes linked to a patient constitute PHI under HIPAA. CPT is maintained by the AMA.",
     "format": "5 digits (00100-99499) or 4 digits + F/T suffix (Category II/III)",
@@ -43,5 +55,5 @@
     }
   },
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z"
+  "updated_at": "2026-03-21T00:00:00Z"
 }

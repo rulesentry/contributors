@@ -3,13 +3,14 @@
   "id": "financial.account_number",
   "qualified_id": "core.financial.account_number",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Bank Account Number (Generic)",
   "description": "Detects generic bank account numbers (8-17 digits). This is a broad pattern that may have false positives; use with caution or combine with context filters.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "financial-industry",
     "production"
   ],
   "metadata": {
@@ -44,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

@@ -3,13 +3,14 @@
   "id": "government.eu_it_vat_code",
   "qualified_id": "core.government.eu_it_vat_code",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Italian VAT Code (Partita IVA)",
   "description": "Detects Italian VAT identification numbers (Partita IVA) with Luhn checksum validation. Format: 11 digits.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "gdpr",
     "production"
   ],
@@ -32,7 +33,9 @@
       "validator": "luhn",
       "validator_params": {
         "strip_chars": " _",
-        "reject_keywords": ["00000000000"]
+        "reject_keywords": [
+          "00000000000"
+        ]
       }
     },
     "effect": {
@@ -50,7 +53,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "IT"
   ]

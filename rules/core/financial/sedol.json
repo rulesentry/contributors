@@ -3,13 +3,14 @@
   "id": "financial.sedol",
   "qualified_id": "core.financial.sedol",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "SEDOL (UK/Irish Securities Identifier)",
   "description": "Detects SEDOL numbers with checksum validation. SEDOL uniquely identifies securities traded on the London Stock Exchange and Irish Stock Exchange.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "financial-industry",
     "production",
     "fca",
     "gdpr"
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "UK",
     "IE"

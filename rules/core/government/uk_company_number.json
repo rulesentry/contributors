@@ -3,13 +3,14 @@
   "id": "government.uk_company_number",
   "qualified_id": "core.government.uk_company_number",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "UK Companies House Number",
   "description": "Detects UK company registration numbers issued by Companies House. Format: 8 digits or 2-letter prefix (e.g., SC, NI, OC) followed by 6 digits, preceded by context keywords.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "government-sector",
     "uk-dpa",
     "production"
   ],
@@ -44,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "UK"
   ]

@@ -3,13 +3,14 @@
   "id": "healthcare.npi_number",
   "qualified_id": "core.healthcare.npi_number",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "National Provider Identifier (NPI)",
   "description": "Detects National Provider Identifier (NPI) numbers with Luhn checksum validation. 10-digit unique identifier for healthcare providers in the US. Format: 1234567893.",
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "healthcare",
     "phi-detection",
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-01-28T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.354727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

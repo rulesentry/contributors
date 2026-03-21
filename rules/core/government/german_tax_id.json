@@ -3,13 +3,14 @@
   "id": "government.german_tax_id",
   "qualified_id": "core.government.german_tax_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "German Tax ID (Steueridentifikationsnummer)",
   "description": "Detects German tax identification numbers. Format: 11 digits.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "gdpr",
     "production"
   ],
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.350724Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "DE"
   ]

@@ -3,13 +3,14 @@
   "id": "government.uk_passport",
   "qualified_id": "core.government.uk_passport",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "UK Passport Number",
   "description": "Detects UK passport numbers. Format: 9 digits optionally preceded by two letters.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "gdpr",
     "uk-dpa",
     "production"
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.350724Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "UK"
   ]

@@ -3,13 +3,14 @@
   "id": "digital_identity.jwt_token",
   "qualified_id": "core.digital_identity.jwt_token",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "JWT Token",
   "description": "Detects JSON Web Tokens (JWT). Format: header.payload.signature (three base64 segments). Used for authentication and authorization.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -42,7 +43,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.353727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

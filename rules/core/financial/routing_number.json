@@ -3,13 +3,14 @@
   "id": "financial.routing_number",
   "qualified_id": "core.financial.routing_number",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "US Routing Number (Checksum Validated)",
   "description": "Detects US bank routing numbers (ABA routing transit numbers) with checksum validation to reduce false positives.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "financial-industry",
     "glba",
     "production"
   ],
@@ -43,7 +44,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

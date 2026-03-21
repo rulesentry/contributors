@@ -3,13 +3,14 @@
   "id": "government.indian_pan",
   "qualified_id": "core.government.indian_pan",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Indian Permanent Account Number (PAN)",
   "description": "Detects Indian PAN cards issued by the Income Tax Department. Format: 5 uppercase letters (4th letter is entity type code) + 4 digits + 1 uppercase letter.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -40,7 +41,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "IN"
   ]

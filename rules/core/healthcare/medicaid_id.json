@@ -3,13 +3,14 @@
   "id": "healthcare.medicaid_id",
   "qualified_id": "core.healthcare.medicaid_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Medicaid ID Number",
   "description": "Detects state Medicaid identification numbers with contextual keywords. Format varies by state, typically 8-13 alphanumeric characters. Pattern looks for 'medicaid' keyword followed by identifier.",
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "healthcare",
     "phi-detection",
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-28T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.354727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

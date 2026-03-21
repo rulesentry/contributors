@@ -3,13 +3,14 @@
   "id": "digital_identity.slack_webhook_url",
   "qualified_id": "core.digital_identity.slack_webhook_url",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Slack Webhook URL",
   "description": "Detects Slack Incoming Webhook URLs. Can post messages to specific Slack channels.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -42,7 +43,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.353727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

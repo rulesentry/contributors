@@ -3,13 +3,14 @@
   "id": "financial.lei",
   "qualified_id": "core.financial.lei",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "LEI (Legal Entity Identifier)",
   "description": "Detects Legal Entity Identifiers with MOD-97 checksum validation. LEI is a 20-character code that uniquely identifies legal entities participating in financial transactions globally.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "financial-industry",
     "production",
     "mifid",
     "sec"
@@ -47,7 +48,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

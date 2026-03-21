@@ -3,13 +3,14 @@
   "id": "financial.clabe_mexico",
   "qualified_id": "core.financial.clabe_mexico",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "CLABE Number (Mexico)",
   "description": "Detects Mexican CLABE (Clave Bancaria Estandarizada) numbers used for electronic transfers. Format: 18 digits with checksum.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "financial-industry",
     "production"
   ],
   "metadata": {
@@ -43,7 +44,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-29T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "MX"
   ]

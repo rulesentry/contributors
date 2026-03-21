@@ -3,13 +3,14 @@
   "id": "healthcare.health_insurance_member_id",
   "qualified_id": "core.healthcare.health_insurance_member_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Health Insurance Member ID",
   "description": "Detects health insurance member/subscriber/policy identification numbers. Format: 6-20 alphanumeric characters with contextual keywords (member, subscriber, policy).",
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "healthcare",
     "phi-detection",
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-28T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.354727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

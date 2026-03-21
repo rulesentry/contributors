@@ -3,13 +3,14 @@
   "id": "financial.uk_bank_account",
   "qualified_id": "core.financial.uk_bank_account",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "UK Bank Account Number",
   "description": "Detects UK bank account numbers. Format: 8 digits preceded by banking context keywords (account number, a/c). UK bank accounts do not have a universal check digit algorithm.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "financial-industry",
     "gdpr",
     "uk-dpa",
     "pci",
@@ -47,7 +48,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "UK"
   ]

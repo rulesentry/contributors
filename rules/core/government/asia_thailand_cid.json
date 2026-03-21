@@ -3,13 +3,14 @@
   "id": "government.asia_thailand_cid",
   "qualified_id": "core.government.asia_thailand_cid",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Thailand Citizen ID Number",
   "description": "Detects Thai national identification card numbers with MOD-11 checksum validation.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:52:56.944288Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "TH"
   ]

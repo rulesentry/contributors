@@ -3,13 +3,14 @@
   "id": "healthcare.medicare_beneficiary_id",
   "qualified_id": "core.healthcare.medicare_beneficiary_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Medicare Beneficiary Identifier (MBI)",
   "description": "Detects Medicare Beneficiary Identifiers (MBI) used since April 2018. Format: 1 character + AC-HJKMNP-RT-Y + AC-HJKMNP-RT-Y0-9 + digit + AC-HJKMNP-RT-Y + AC-HJKMNP-RT-Y0-9 + digit + 2 letters + 2 digits (e.g., 1AB2C3D4EF56). Excludes easily confused characters (S, L, O, I, B, Z).",
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "healthcare",
     "phi-detection",
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-01-28T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.354727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

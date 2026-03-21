@@ -3,13 +3,14 @@
   "id": "digital_identity.oauth_bearer_token",
   "qualified_id": "core.digital_identity.oauth_bearer_token",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "OAuth Bearer Token",
   "description": "Detects OAuth 2.0 Bearer tokens in Authorization headers. Format: Bearer [token]. Used for API authentication.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.353727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

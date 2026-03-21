@@ -3,13 +3,14 @@
   "id": "government.ein",
   "qualified_id": "core.government.ein",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "US Employer Identification Number (EIN)",
   "description": "Detects US Employer Identification Numbers (Tax ID). Format: XX-XXXXXXX (9 digits).",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "glba",
     "production"
   ],
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.350724Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

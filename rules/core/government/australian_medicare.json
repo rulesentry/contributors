@@ -3,13 +3,14 @@
   "id": "government.australian_medicare",
   "qualified_id": "core.government.australian_medicare",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Australian Medicare Number",
   "description": "Detects Australian Medicare card numbers with MOD-10 checksum validation. Format: first digit 2-6, followed by 9 digits, with optional /N issue number suffix.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -41,7 +42,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "AU"
   ]

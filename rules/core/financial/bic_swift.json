@@ -3,13 +3,14 @@
   "id": "financial.bic_swift",
   "qualified_id": "core.financial.bic_swift",
   "type": "rule",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "name": "BIC/SWIFT Code",
   "description": "Detects BIC (Bank Identifier Code) / SWIFT codes used for international wire transfers. Format: 4 letters (bank) + 2 letters (country) + 2 chars (location) + optional 3 chars (branch).",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "financial-industry",
     "production"
   ],
   "metadata": {
@@ -28,12 +29,18 @@
       "validator": "context_filter",
       "validator_params": {
         "reject_keywords": [
-          "customer", "customers",
-          "business", "provided",
-          "contains", "container",
-          "continue", "continued",
-          "training", "together",
-          "required", "thinking"
+          "customer",
+          "customers",
+          "business",
+          "provided",
+          "contains",
+          "container",
+          "continue",
+          "continued",
+          "training",
+          "together",
+          "required",
+          "thinking"
         ]
       }
     },
@@ -53,7 +60,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

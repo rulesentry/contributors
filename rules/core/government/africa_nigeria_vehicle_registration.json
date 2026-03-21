@@ -3,13 +3,14 @@
   "id": "government.africa_nigeria_vehicle_registration",
   "qualified_id": "core.government.africa_nigeria_vehicle_registration",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Nigerian Vehicle Registration Plate",
   "description": "Detects Nigerian vehicle registration plate numbers. Format: 3-letter LGA code + 3 digits + 2-letter code.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "low",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -28,7 +29,12 @@
       "engine": "regex",
       "validator": "context_filter",
       "validator_params": {
-        "reject_keywords": ["example", "sample", "test", "demo"]
+        "reject_keywords": [
+          "example",
+          "sample",
+          "test",
+          "demo"
+        ]
       }
     },
     "effect": {
@@ -45,7 +51,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "NG"
   ]

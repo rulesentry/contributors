@@ -3,7 +3,7 @@
   "id": "healthcare.npi_luhn",
   "qualified_id": "core.healthcare.npi_luhn",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "status": "active",
   "name": "National Provider Identifier (NPI)",
   "summary": "Detects US NPI numbers with Luhn checksum validation",
@@ -12,6 +12,7 @@
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "production"
   ],
@@ -54,5 +55,5 @@
     }
   },
   "created_at": "2026-02-10T00:00:00Z",
-  "updated_at": "2026-03-10T00:00:00Z"
+  "updated_at": "2026-03-21T00:00:00Z"
 }

@@ -3,13 +3,14 @@
   "id": "digital_identity.sendgrid_api_key",
   "qualified_id": "core.digital_identity.sendgrid_api_key",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "SendGrid API Key",
   "description": "Detects SendGrid email API keys. Format: SG. followed by base64. Can send emails, access contact lists.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -41,7 +42,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.352728Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

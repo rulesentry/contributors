@@ -3,13 +3,14 @@
   "id": "government.us_driver_license",
   "qualified_id": "core.government.us_driver_license",
   "type": "rule",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "name": "US Driver License Number",
   "description": "Detects US driver license numbers using context-anchored matching. Requires a keyword prefix (DL, driver license, license number, etc.) followed by an alphanumeric identifier. Trades recall for precision — per-state format rules are a future enhancement.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "hipaa",
     "ccpa",
     "production"
@@ -31,7 +32,14 @@
       },
       "validator": "context_filter",
       "validator_params": {
-        "reject_keywords": ["example", "sample", "test", "demo", "fake", "invalid"]
+        "reject_keywords": [
+          "example",
+          "sample",
+          "test",
+          "demo",
+          "fake",
+          "invalid"
+        ]
       }
     },
     "effect": {
@@ -49,7 +57,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-18T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "US"
   ]

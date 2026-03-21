@@ -4,13 +4,14 @@
   "id": "digital_identity.aws_access_key_id",
   "qualified_id": "core.digital_identity.aws_access_key_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "AWS Access Key ID",
   "description": "Detects Amazon Web Services (AWS) Access Key IDs. Format: AKIA followed by 16 alphanumeric characters. Exposure can lead to unauthorized access to AWS resources.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -42,7 +43,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.352728Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

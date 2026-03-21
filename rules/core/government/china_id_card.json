@@ -3,13 +3,14 @@
   "id": "government.china_id_card",
   "qualified_id": "core.government.china_id_card",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "China Resident Identity Card",
   "description": "Detects Chinese national ID card numbers with GB 11643-1999 checksum validation. Format: 18 digits (6 region + 8 DOB + 3 sequential + 1 checksum).",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -42,7 +43,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.350724Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "CN"
   ]

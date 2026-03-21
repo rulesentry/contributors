@@ -3,13 +3,14 @@
   "id": "government.nino_checksum",
   "qualified_id": "core.government.nino_checksum",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "UK National Insurance Number (Checksum Validated)",
   "description": "Detects UK National Insurance (NI) numbers with checksum validation. Format: 2 letters + 6 digits + 1 letter.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "gdpr",
     "uk-dpa",
     "production"
@@ -44,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.350724Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "UK"
   ]

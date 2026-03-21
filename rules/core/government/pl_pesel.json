@@ -3,13 +3,14 @@
   "id": "government.pl_pesel",
   "qualified_id": "core.government.pl_pesel",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Polish PESEL Number",
   "description": "Detects Polish national identification numbers (PESEL) with explicit context. PESEL is an 11-digit number encoding birth date, ordinal number, and checksum, issued to all residents of Poland.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "government-sector",
     "gdpr",
     "production"
   ],
@@ -44,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-03-13T00:00:00Z",
-  "updated_at": "2026-03-13T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "PL"
   ]

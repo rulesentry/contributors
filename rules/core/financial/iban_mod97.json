@@ -3,13 +3,14 @@
   "id": "financial.iban_mod97",
   "qualified_id": "core.financial.iban_mod97",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "IBAN (MOD-97 Validated)",
   "description": "Detects International Bank Account Numbers with MOD-97 checksum validation. Supports all IBAN countries worldwide.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "financial-industry",
     "gdpr",
     "sepa",
     "production"
@@ -47,7 +48,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

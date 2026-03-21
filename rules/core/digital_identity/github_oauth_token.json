@@ -3,13 +3,14 @@
   "id": "digital_identity.github_oauth_token",
   "qualified_id": "core.digital_identity.github_oauth_token",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "GitHub OAuth Access Token",
   "description": "Detects GitHub OAuth access tokens. Format: gho_ prefix. Used by GitHub Apps and OAuth Apps.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -41,7 +42,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.352728Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

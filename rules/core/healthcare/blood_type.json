@@ -3,13 +3,14 @@
   "id": "healthcare.blood_type",
   "qualified_id": "core.healthcare.blood_type",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Blood Type",
   "description": "Detects blood type mentions (e.g., 'Blood Type: O+', 'A-', 'AB+'). Considered sensitive health data under GDPR Article 9 and HIPAA PHI.",
   "category_id": "healthcare",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "healthcare-industry",
     "hipaa",
     "gdpr",
     "production"
@@ -45,7 +46,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-03-13T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

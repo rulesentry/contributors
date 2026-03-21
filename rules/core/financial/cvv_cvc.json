@@ -3,13 +3,14 @@
   "id": "financial.cvv_cvc",
   "qualified_id": "core.financial.cvv_cvc",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "CVV/CVC Security Code",
   "description": "Detects credit card CVV/CVC security codes (3-4 digits). PCI-DSS prohibits storage of CVV codes after authorization.",
   "category_id": "financial",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "financial-industry",
     "pci-dss",
     "production"
   ],
@@ -44,7 +45,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.351727Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

@@ -3,13 +3,14 @@
   "id": "government.indian_voter_id",
   "qualified_id": "core.government.indian_voter_id",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Indian Voter ID (EPIC)",
   "description": "Detects Indian Elector's Photo Identity Card (EPIC) numbers. Format: 3 letters followed by 7 digits. Context-anchored to reduce false positives.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -47,7 +48,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "IN"
   ]

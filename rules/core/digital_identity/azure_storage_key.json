@@ -3,13 +3,14 @@
   "id": "digital_identity.azure_storage_key",
   "qualified_id": "core.digital_identity.azure_storage_key",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Azure Storage Account Key",
   "description": "Detects Microsoft Azure Storage Account keys. 88-character base64 strings with context (DefaultEndpointsProtocol or AccountKey) that grant full access to Azure Storage accounts.",
   "category_id": "digital_identity",
   "rule_kind": "atomic",
   "severity": "critical",
   "profiles": [
+    "technology-sector",
     "production"
   ],
   "metadata": {
@@ -41,7 +42,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:38:02.352728Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "GLOBAL"
   ]

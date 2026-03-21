@@ -3,13 +3,14 @@
   "id": "government.indian_passport",
   "qualified_id": "core.government.indian_passport",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Indian Passport Number",
   "description": "Detects Indian passport numbers. Format: 1 letter + 2 digits (first non-zero) + optional space + 4 digits + 1 digit (non-zero). Context-anchored to reduce false positives.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "medium",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -46,7 +47,7 @@
   },
   "status": "active",
   "created_at": "2026-03-17T00:00:00Z",
-  "updated_at": "2026-03-17T00:00:00Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "IN"
   ]

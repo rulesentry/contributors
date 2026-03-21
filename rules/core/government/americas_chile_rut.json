@@ -3,13 +3,14 @@
   "id": "government.americas_chile_rut",
   "qualified_id": "core.government.americas_chile_rut",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "name": "Chilean RUT (Rol Único Tributario)",
   "description": "Detects Chilean unique tax role numbers with check digit (Modulo 11) validation.",
   "category_id": "government",
   "rule_kind": "atomic",
   "severity": "high",
   "profiles": [
+    "government-sector",
     "production"
   ],
   "metadata": {
@@ -49,7 +50,7 @@
   },
   "status": "active",
   "created_at": "2026-01-27T00:00:00Z",
-  "updated_at": "2026-01-27T19:52:56.929760Z",
+  "updated_at": "2026-03-21T00:00:00Z",
   "regions": [
     "CL"
   ]

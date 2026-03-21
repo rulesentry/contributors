@@ -3,7 +3,7 @@
   "id": "healthcare.phi_composite",
   "qualified_id": "core.healthcare.phi_composite",
   "type": "rule",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "status": "active",
   "name": "PHI Composite Detection",
   "summary": "Triggers when both a medical record number and date of birth appear together",
@@ -11,9 +11,20 @@
   "category_id": "healthcare",
   "rule_kind": "composite",
   "severity": "critical",
-  "profiles": ["hipaa", "production"],
-  "regions": ["US"],
-  "tags": ["phi", "healthcare", "composite", "hipaa"],
+  "profiles": [
+    "healthcare-industry",
+    "hipaa",
+    "production"
+  ],
+  "regions": [
+    "US"
+  ],
+  "tags": [
+    "phi",
+    "healthcare",
+    "composite",
+    "hipaa"
+  ],
   "metadata": {
     "compliance_notes": "Combination of medical + personal identifiers constitutes PHI under HIPAA Privacy Rule",
     "composite_logic": "Triggers when MRN AND DOB are both present in the same content"
@@ -40,7 +51,9 @@
       "message": "PHI detected: medical record number combined with date of birth constitutes Protected Health Information under HIPAA. Content tokenized for safe handling.",
       "transform": {
         "type": "tokenize",
-        "params": { "prefix": "PHI" }
+        "params": {
+          "prefix": "PHI"
+        }
       }
     },
     "side_effects": [
@@ -57,5 +70,5 @@
     ]
   },
   "created_at": "2026-02-10T00:00:00Z",
-  "updated_at": "2026-03-10T00:00:00Z"
+  "updated_at": "2026-03-21T00:00:00Z"
 }
